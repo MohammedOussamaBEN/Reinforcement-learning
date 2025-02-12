@@ -74,26 +74,29 @@ This repository contains my individual work for the Hands-On Reinforcement Learn
 
 ---
 
-## 4. Full Workflow with Panda-Gym
+### 4. Full Workflow with Panda-Gym
 
-### Implementation
+**Implementation**  
 - **File:** `a2c_sb3_panda_reach.ipynb`  
-  I used Stable-Baselines3 to train an A2C model on the PandaReachJointsDense-v3 environment (a robotic arm task) using 500k timesteps.
-- The code integrates tracking with Weights & Biases.
+  I used Stable-Baselines3 to train an A2C model on the PandaReachJointsDense-v3 environment (a robotic arm task) using 500k timesteps. The code integrates tracking with Weights & Biases.
 
-### Training Results
+**Training Results**  
 - **W&B Run for Panda-Gym:**  
-  [Panda-Gym W&B Run](https://wandb.ai/benyahiamohammedoussama-ecole-central-lyon/panda-gym)
-- The training performance shows robust learning behavior in the complex 3D control task.
+  [Panda-Gym W&B Run](https://wandb.ai/benyahiamohammedoussama-ecole-central-lyon/panda-gym)  
+  The training performance shows robust learning behavior in the complex 3D control task.  
+- **Training Total Rewards Plot:**  
+  ![Training Total Rewards Plot](images/training_total_rewards.png)  
+  *(Figure: Training total rewards performance during the 500k timesteps run)*
 
-### Model Upload and Evaluation
+**Model Upload and Evaluation**  
 - The trained model has been uploaded on Hugging Face Hub:  
   [A2C Panda-Reach Model](https://huggingface.co/oussamab2n/a2c-panda-reach)
-- **Evaluation:**  
-  In an evaluation run over 100 episodes (counting episodes that reach a total reward of -0.25), 97% of episodes meet the criterion.
+
+**Evaluation**  
+- In an evaluation run over 100 episodes (considering episodes that reach a total reward of -0.25), 97% of episodes meet the criterion.  
 - **Evaluation Plot:**  
-  ![Panda-Gym Evaluation Plot](path/to/evaluation_plot_panda_gym.png)  
-  *(Figure: Evaluation performance on PandaReachJointsDense-v3 environment)*
+  ![Evaluation Plot](images/evaluation_panda_reach.png)  
+  *(Figure: Evaluation performance on the PandaReachJointsDense-v3 environment)*
 
 ---
 
