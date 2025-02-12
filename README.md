@@ -85,7 +85,7 @@ This repository contains my individual work for the Hands-On Reinforcement Learn
   [Panda-Gym W&B Run](https://wandb.ai/benyahiamohammedoussama-ecole-central-lyon/panda-gym)  
   The training performance shows robust learning behavior in the complex 3D control task.  
 - **Training Total Rewards Plot:**  
-  ![Training Total Rewards Plot](images/training_total_rewards.png)  
+  ![Training Total Rewards Plot](/images/panda_sb3_train.png)  
   *(Figure: Training total rewards performance during the 500k timesteps run)*
 
 **Model Upload and Evaluation**  
@@ -95,7 +95,7 @@ This repository contains my individual work for the Hands-On Reinforcement Learn
 **Evaluation**  
 - In an evaluation run over 100 episodes (considering episodes that reach a total reward of -0.25), 97% of episodes meet the criterion.  
 - **Evaluation Plot:**  
-  ![Evaluation Plot](images/evaluation_panda_reach.png)  
+  ![Evaluation Plot](/images/panda_sb3_eval.png)  
   *(Figure: Evaluation performance on the PandaReachJointsDense-v3 environment)*
 
 ---
