@@ -105,6 +105,5 @@ This project provided a hands-on experience with:
 - Using Stable-Baselines3 for more advanced RL tasks and integrating with external tools such as Weights & Biases and Hugging Face Hub.
 - Addressing both classical control (CartPole) and a complex robotic control task (PandaReach).
 
-Feel free to explore the individual notebooks for more details on the implementation, training, and evaluation processes.
 
 ---
