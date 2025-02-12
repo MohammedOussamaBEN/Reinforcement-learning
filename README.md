@@ -37,13 +37,13 @@ This repository contains my individual work for the Hands-On Reinforcement Learn
   I used the Advantage Actor-Critic (A2C) algorithm provided by the Stable-Baselines3 package to solve the CartPole environment.
 - The training run shows that the total rewards quickly reach 500 within the first few episodes.
 - **Training Plot:**  
-  ![SB3 CartPole Training Plot](path/to/training_plot_sb3_cartpole.png)  
+  ![SB3 CartPole Training Plot](/images/sb3_train.png)  
   *(Figure: Total rewards per episode during A2C training on CartPole)*
 
 ### Evaluation
 - The model was also evaluated, achieving 100% of episodes with a total reward of 500.
 - **Evaluation Plot:**  
-  ![SB3 CartPole Evaluation Plot](path/to/evaluation_plot_sb3_cartpole.png)  
+  ![SB3 CartPole Evaluation Plot](/images/sb3_eval.png)  
   *(Figure: Evaluation performance over 100 episodes)*
 
 ### Model Upload
@@ -59,7 +59,7 @@ This repository contains my individual work for the Hands-On Reinforcement Learn
 - **W&B Run:**  
   [W&B Run for A2C CartPole](https://wandb.ai/benyahiamohammedoussama-ecole-central-lyon/wb_sb3)
 - **Training Plot from W&B:**  
-  ![W&B Training Plot](path/to/wandb_training_plot.png)  
+  ![W&B Training Plot](/images/sb3_wb_train.png)  
   *(Figure: Training episodes total rewards as tracked by W&B)*
 
 ### Model Upload
@@ -69,7 +69,7 @@ This repository contains my individual work for the Hands-On Reinforcement Learn
 ### Evaluation
 - The evaluation run (100 episodes) shows that 69% of episodes reached a total reward of 500, while the remaining episodes were very close to 500.
 - **Evaluation Plot:**  
-  ![W&B Evaluation Plot](path/to/wandb_evaluation_plot.png)  
+  ![W&B Evaluation Plot](/images/sb3_wb_eval.png)  
   *(Figure: Evaluation performance over 100 episodes)*
 
 ---
