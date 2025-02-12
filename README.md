@@ -13,7 +13,7 @@ This repository contains my individual work for the Hands-On Reinforcement Learn
 ### Training Results
 - Over 500 episodes, the total rewards progressively increased, showing the learning progress of the agent.  
 - **Training Plot:**  
-  ![Training Plot](/images/eval_rewards.png)  
+  ![Training Plot](/images/train_rewards.png)  
   *(Figure: Total rewards per episode during training)*
 
 ### Model Saving
@@ -25,7 +25,7 @@ This repository contains my individual work for the Hands-On Reinforcement Learn
 - **Evaluation Results:**  
   100% of the episodes reached a total reward of 500.
 - **Evaluation Plot:**  
-  ![Evaluation Plot](path/to/evaluation_plot_reinforce.png)  
+  ![Evaluation Plot](/images/eval_rewards.png)  
   *(Figure: Evaluation performance over 100 episodes)*
 
 ---
