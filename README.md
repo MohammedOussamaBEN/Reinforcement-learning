@@ -13,7 +13,7 @@ This repository contains my individual work for the Hands-On Reinforcement Learn
 ### Training Results
 - Over 500 episodes, the total rewards progressively increased, showing the learning progress of the agent.  
 - **Training Plot:**  
-  ![Training Plot](path/to/training_plot_reinforce.png)  
+  ![Training Plot](/images/eval_rewards.png)  
   *(Figure: Total rewards per episode during training)*
 
 ### Model Saving
