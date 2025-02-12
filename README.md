@@ -67,7 +67,7 @@ This repository contains my individual work for the Hands-On Reinforcement Learn
   [A2C CartPole (W&B) Model](https://huggingface.co/oussamab2n/a2c-cartpole-wb)
 
 ### Evaluation
-- The evaluation run (100 episodes) shows that 69% of episodes reached a total reward of 500, while the remaining episodes were very close to 500.
+- The evaluation run (100 episodes) shows that 100% of episodes reached a total reward of 500.
 - **Evaluation Plot:**  
   ![W&B Evaluation Plot](/images/sb3_wb_eval.png)  
   *(Figure: Evaluation performance over 100 episodes)*
