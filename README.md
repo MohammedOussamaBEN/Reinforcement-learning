@@ -1,7 +1,3 @@
-Below is an upgraded version of your README.md file that clearly explains your workflow, results, and includes the necessary links and images. You can adjust the image paths (or use embedded images) as needed for your repository.
-
----
-
 # Hands-On Reinforcement Learning – TD 1
 
 This repository contains my individual work for the Hands-On Reinforcement Learning project. The project is organized in several parts that demonstrate the implementation and evaluation of reinforcement learning (RL) algorithms on the CartPole environment and a robotic arm environment using both custom PyTorch implementations and high-level libraries like Stable-Baselines3.
@@ -112,5 +108,3 @@ This project provided a hands-on experience with:
 Feel free to explore the individual notebooks for more details on the implementation, training, and evaluation processes.
 
 ---
-
-*Note: Replace the placeholder paths (`path/to/...`) with the actual paths or links to your images.*
