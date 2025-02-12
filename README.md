@@ -1,93 +1,116 @@
-# hands-on-rl
+Below is an upgraded version of your README.md file that clearly explains your workflow, results, and includes the necessary links and images. You can adjust the image paths (or use embedded images) as needed for your repository.
 
+---
 
+# Hands-On Reinforcement Learning – TD 1
 
-## Getting started
+This repository contains my individual work for the Hands-On Reinforcement Learning project. The project is organized in several parts that demonstrate the implementation and evaluation of reinforcement learning (RL) algorithms on the CartPole environment and a robotic arm environment using both custom PyTorch implementations and high-level libraries like Stable-Baselines3.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+---
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+## 1. REINFORCE on CartPole
 
-## Add your files
+### Implementation
+- **File:** `reinforce_cartpole.ipynb`  
+  I implemented the REINFORCE (Vanilla Policy Gradient) algorithm in PyTorch to solve the CartPole-v1 environment.
+  
+### Training Results
+- Over 500 episodes, the total rewards progressively increased, showing the learning progress of the agent.  
+- **Training Plot:**  
+  ![Training Plot](path/to/training_plot_reinforce.png)  
+  *(Figure: Total rewards per episode during training)*
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+### Model Saving
+- The trained model weights are saved in the file: `reinforce_cartpole.pth`.
 
-```
-cd existing_repo
-git remote add origin https://gitlab.ec-lyon.fr/mbenyahi/hands-on-rl.git
-git branch -M main
-git push -uf origin main
-```
+### Evaluation
+- **File:** `evaluate_reinforce_cartpole.ipynb`  
+  The saved model was evaluated over 100 episodes. An episode is considered successful if it reaches a total reward of 500.
+- **Evaluation Results:**  
+  100% of the episodes reached a total reward of 500.
+- **Evaluation Plot:**  
+  ![Evaluation Plot](path/to/evaluation_plot_reinforce.png)  
+  *(Figure: Evaluation performance over 100 episodes)*
 
-## Integrate with your tools
+---
 
-- [ ] [Set up project integrations](https://gitlab.ec-lyon.fr/mbenyahi/hands-on-rl/-/settings/integrations)
+## 2. A2C with Stable-Baselines3 on CartPole
 
-## Collaborate with your team
+### Implementation
+- **File:** `a2c_sb3_cartpole.ipynb`  
+  I used the Advantage Actor-Critic (A2C) algorithm provided by the Stable-Baselines3 package to solve the CartPole environment.
+- The training run shows that the total rewards quickly reach 500 within the first few episodes.
+- **Training Plot:**  
+  ![SB3 CartPole Training Plot](path/to/training_plot_sb3_cartpole.png)  
+  *(Figure: Total rewards per episode during A2C training on CartPole)*
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+### Evaluation
+- The model was also evaluated, achieving 100% of episodes with a total reward of 500.
+- **Evaluation Plot:**  
+  ![SB3 CartPole Evaluation Plot](path/to/evaluation_plot_sb3_cartpole.png)  
+  *(Figure: Evaluation performance over 100 episodes)*
 
-## Test and Deploy
+### Model Upload
+- The trained A2C model is available on Hugging Face Hub:  
+  [A2C CartPole Model](https://huggingface.co/oussamab2n/a2c-cartpole)
 
-Use the built-in continuous integration in GitLab.
+---
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+## 3. Tracking with Weights & Biases (W&B) on CartPole
 
-***
+### Training with W&B
+- I integrated Weights & Biases in `a2c_sb3_cartpole.ipynb` to monitor the training progress.
+- **W&B Run:**  
+  [W&B Run for A2C CartPole](https://wandb.ai/benyahiamohammedoussama-ecole-central-lyon/wb_sb3)
+- **Training Plot from W&B:**  
+  ![W&B Training Plot](path/to/wandb_training_plot.png)  
+  *(Figure: Training episodes total rewards as tracked by W&B)*
 
-# Editing this README
+### Model Upload
+- After training with W&B, the model was also uploaded on Hugging Face Hub:  
+  [A2C CartPole (W&B) Model](https://huggingface.co/oussamab2n/a2c-cartpole-wb)
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+### Evaluation
+- The evaluation run (100 episodes) shows that 69% of episodes reached a total reward of 500, while the remaining episodes were very close to 500.
+- **Evaluation Plot:**  
+  ![W&B Evaluation Plot](path/to/wandb_evaluation_plot.png)  
+  *(Figure: Evaluation performance over 100 episodes)*
 
-## Suggestions for a good README
+---
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+## 4. Full Workflow with Panda-Gym
 
-## Name
-Choose a self-explaining name for your project.
+### Implementation
+- **File:** `a2c_sb3_panda_reach.ipynb`  
+  I used Stable-Baselines3 to train an A2C model on the PandaReachJointsDense-v3 environment (a robotic arm task) using 500k timesteps.
+- The code integrates tracking with Weights & Biases.
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+### Training Results
+- **W&B Run for Panda-Gym:**  
+  [Panda-Gym W&B Run](https://wandb.ai/benyahiamohammedoussama-ecole-central-lyon/panda-gym)
+- The training performance shows robust learning behavior in the complex 3D control task.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+### Model Upload and Evaluation
+- The trained model has been uploaded on Hugging Face Hub:  
+  [A2C Panda-Reach Model](https://huggingface.co/oussamab2n/a2c-panda-reach)
+- **Evaluation:**  
+  In an evaluation run over 100 episodes (counting episodes that reach a total reward of -0.25), 97% of episodes meet the criterion.
+- **Evaluation Plot:**  
+  ![Panda-Gym Evaluation Plot](path/to/evaluation_plot_panda_gym.png)  
+  *(Figure: Evaluation performance on PandaReachJointsDense-v3 environment)*
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+---
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+## Conclusion
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+This project provided a hands-on experience with:
+- Implementing a basic RL algorithm (REINFORCE) in PyTorch.
+- Evaluating the RL model with a custom evaluation script.
+- Using Stable-Baselines3 for more advanced RL tasks and integrating with external tools such as Weights & Biases and Hugging Face Hub.
+- Addressing both classical control (CartPole) and a complex robotic control task (PandaReach).
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+Feel free to explore the individual notebooks for more details on the implementation, training, and evaluation processes.
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+---
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+*Note: Replace the placeholder paths (`path/to/...`) with the actual paths or links to your images.*
