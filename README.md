@@ -81,7 +81,9 @@ This repository contains my individual work for the **Hands-On Reinforcement Lea
 - **Evaluation Plot:**  
   ![W&B Evaluation Plot](/images/sb3_wb_eval.png)  
   *(Figure: Evaluation results tracked using W&B.)*
-
+- **Video exemple:**  
+  ![W&B Evaluation Video](a2c_sb3_cartpole.mp4) 
+ 
 ---
 
 ## 4. Full Workflow with Panda-Gym  
@@ -112,7 +114,7 @@ This repository contains my individual work for the **Hands-On Reinforcement Lea
 
 - **Total episodes with truncation:** 99/100
 - **Average reward at truncation:** -7.68
-- **Percentage of episodes meeting the reward threshold:** 97%, indicating strong performance.
+- **Percentage of episodes meeting the reward threshold:** 99%, indicating strong performance.
 
 
 - **Evaluation Plot:**  
