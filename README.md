@@ -107,11 +107,20 @@ This repository contains my individual work for the **Hands-On Reinforcement Lea
   [A2C Panda-Reach Model](https://huggingface.co/oussamab2n/a2c-panda-reach)
 
 ### Evaluation  
-- **Evaluation Process:**  
-  - The model was evaluated over **100 episodes**.  
-  - An episode is considered **successful** if it reaches a total reward of **-0.25**.  
-- **Evaluation Results:**  
-  - **97%** of episodes successfully met the reward threshold, indicating strong performance.  
+
+
+- **Evaluation Process:**
+
+- The model was evaluated over 100 episodes.
+- An episode is considered successful if it reaches a total reward of -0.25.
+
+- **Updated Evaluation Results:**
+
+- **Total episodes with truncation:** 99/100
+- **Average reward at truncation:** -7.68
+- **Percentage of episodes meeting the reward threshold:** 97%, indicating strong performance.
+
+
 - **Evaluation Plot:**  
   ![Evaluation Plot](/images/panda_sb3_eval.png)  
   *(Figure: The robotic arm’s performance on the PandaReachJointsDense-v3 environment.)*
