@@ -108,13 +108,7 @@ This repository contains my individual work for the **Hands-On Reinforcement Lea
 
 ### Evaluation  
 
-
-- **Evaluation Process:**
-
-- The model was evaluated over 100 episodes.
-- An episode is considered successful if it reaches a total reward of -0.25.
-
-- **Updated Evaluation Results:**
+- **Evaluation Results:**
 
 - **Total episodes with truncation:** 99/100
 - **Average reward at truncation:** -7.68
