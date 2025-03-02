@@ -28,6 +28,9 @@ This repository contains my individual work for the **Hands-On Reinforcement Lea
   ![Evaluation Plot](/images/eval_rewards.png)  
   *(Figure: The model consistently reaches a total reward of 500 over 100 evaluation episodes.)*
 
+- **Video exemple:**  
+  ![reinforce_cartpole Evaluation Video](reinforce_cartpole.mp4) 
+
 ---
 
 ## 2. A2C with Stable-Baselines3 on CartPole  
