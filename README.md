@@ -124,6 +124,9 @@ This repository contains my individual work for the **Hands-On Reinforcement Lea
   ![Evaluation Plot](/images/panda_sb3_eval.png)  
   *(Figure: The robotic arm’s performance on the PandaReachJointsDense-v3 environment.)*
 
+- **Video exemple:**  
+  ![a2c_sb3_panda_reach Evaluation Video](a2c_sb3_panda_reach.mp4) 
+
 ---
 
 ## Conclusion  
