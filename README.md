@@ -1,55 +1,55 @@
-# Hands-On Reinforcement Learning – TD 1  
+# Hands-On Reinforcement Learning – TD 1
 
-This repository contains my individual work for the **Hands-On Reinforcement Learning** project. The project explores reinforcement learning (RL) techniques applied to the **CartPole** and **Panda-Gym robotic arm** environments. The goal is to implement and evaluate RL models using both **custom PyTorch implementations** and **high-level libraries like Stable-Baselines3**.  
+This repository contains my individual work for the **Hands-On Reinforcement Learning** project. The project explores reinforcement learning (RL) techniques applied to the **CartPole** and **Panda-Gym robotic arm** environments. The goal is to implement and evaluate RL models using both **custom PyTorch implementations** and **high-level libraries like Stable-Baselines3**.
 
 ---
 
-## 1. REINFORCE on CartPole  
+## 1. REINFORCE on CartPole
 
 ### Implementation  
 - **File:** `reinforce_cartpole.ipynb`  
   The **REINFORCE (Vanilla Policy Gradient)** algorithm was implemented using PyTorch. The model learns an optimal policy for solving the **CartPole-v1** environment by updating the policy network using gradients computed from episode returns.
 
 ### Training Results  
-- The training process lasted for **500 episodes**, and we observed a steady increase in total rewards, confirming that the model successfully learned to balance the pole.  
+- The model was trained for **500 episodes**, showing a steady increase in total rewards. The goal (total reward = 500) was reached consistently after **400 episodes**, confirming successful learning.
 - **Training Plot:**  
   ![Training Plot](/images/train_rewards.png)  
-  *(Figure: The total rewards increase per episode, showing a successful learning process.)*
+  *(Figure: Total rewards increase per episode, indicating successful learning.)*
 
 ### Model Saving  
 - The trained model is saved as: `reinforce_cartpole.pth`.
 
 ### Evaluation  
 - **File:** `evaluate_reinforce_cartpole.ipynb`  
-  The model was evaluated over **100 episodes**, and the success criterion was reaching a total reward of **500**.  
+  The model was evaluated over **100 episodes**, with the success criterion being a total reward of **500**.
 - **Evaluation Results:**  
-  - **100%** of the episodes reached a total reward of 500, demonstrating the model’s reliability.  
+  - **100%** of the episodes reached a total reward of **500**, demonstrating the model’s reliability.
 - **Evaluation Plot:**  
   ![Evaluation Plot](/images/eval_rewards.png)  
   *(Figure: The model consistently reaches a total reward of 500 over 100 evaluation episodes.)*
 
-- **Video exemple:**  
-  ![reinforce_cartpole Evaluation Video](reinforce_cartpole.mp4) 
+- **Example Video:**  
+  ![REINFORCE CartPole Evaluation Video](reinforce_cartpole.mp4)  
 
 ---
 
-## 2. A2C with Stable-Baselines3 on CartPole  
+## 2. A2C with Stable-Baselines3 on CartPole
 
 ### Implementation  
 - **File:** `a2c_sb3_cartpole.ipynb`  
-  I used **Advantage Actor-Critic (A2C)** from **Stable-Baselines3**, which is an advanced RL algorithm combining value-based and policy-based methods.  
+  Implemented **Advantage Actor-Critic (A2C)** using **Stable-Baselines3**, which combines value-based and policy-based RL methods.
 
 ### Training Results  
-- The total rewards **quickly reach 500** within the first few episodes, indicating that **A2C is significantly more efficient** than the REINFORCE approach.  
+- The model was trained for **500,000 timesteps**, reaching a total reward of **500** consistently after **400 episodes**. It continued training for **1,400 episodes**, confirming stable convergence similar to the REINFORCE approach.
 - **Training Plot:**  
   ![SB3 CartPole Training Plot](/images/sb3_train.png)  
-  *(Figure: A2C rapidly achieves optimal performance within a few episodes.)*
+  *(Figure: A2C training performance over time.)*
 
 ### Evaluation  
-- The trained model was evaluated, and **100%** of the episodes successfully reached a total reward of **500**.  
+- The trained model was evaluated, achieving **100% success**, with all episodes reaching a total reward of **500**.
 - **Evaluation Plot:**  
   ![SB3 CartPole Evaluation Plot](/images/sb3_eval.png)  
-  *(Figure: The A2C-trained model consistently achieves perfect performance over 100 episodes.)*
+  *(Figure: A2C model consistently achieves perfect performance over 100 episodes.)*
 
 ### Model Upload  
 - The trained A2C model is available on Hugging Face Hub:  
@@ -57,21 +57,20 @@ This repository contains my individual work for the **Hands-On Reinforcement Lea
 
 ---
 
-## 3. Tracking with Weights & Biases (W&B) on CartPole  
+## 3. Tracking with Weights & Biases (W&B) on CartPole
 
 ### Training with W&B  
 - **File:** `a2c_sb3_cartpole.ipynb`  
-  The A2C training process was tracked using **Weights & Biases (W&B)** to monitor performance metrics.  
+  The A2C training process was tracked using **Weights & Biases (W&B)** to monitor performance metrics.
 - **W&B Run:**  
   [W&B Run for A2C CartPole](https://wandb.ai/benyahiamohammedoussama-ecole-central-lyon/wb_sb3)  
 
 ### Training Analysis  
 - **Observations:**  
-  - The training curve indicates that the **A2C model converges very quickly**.  
-  - The **performance remains stable**, showing that the policy does not degrade after convergence.  
+  - The training curve indicates that the **A2C model stabilizes after 1,300 episodes**.  
+  - The model exhibits strong and consistent performance.
 - **Training Plot:**  
   ![W&B Training Plot](/images/sb3_wb_train.png)  
-  *(Figure: Training performance tracked using W&B.)*
 
 ### Model Upload  
 - The trained A2C model (tracked with W&B) is available on Hugging Face Hub:  
@@ -79,76 +78,58 @@ This repository contains my individual work for the **Hands-On Reinforcement Lea
 
 ### Evaluation  
 - **Evaluation Results:**  
-  - **100%** of the episodes successfully reached a total reward of **500**.  
-  - This further confirms that **A2C is highly stable and performs consistently well.**  
+  - **100%** of episodes reached a total reward of **500**, confirming the model’s reliability.
 - **Evaluation Plot:**  
   ![W&B Evaluation Plot](/images/sb3_wb_eval.png)  
   *(Figure: Evaluation results tracked using W&B.)*
-- **Video exemple:**  
-  ![W&B Evaluation Video](a2c_sb3_cartpole.mp4) 
- 
+- **Example Video:**  
+  ![W&B Evaluation Video](a2c_sb3_cartpole.mp4)  
+  The A2C model stabilizes the balancing process more efficiently due to its superior performance compared to the REINFORCE approach.
+
 ---
 
-## 4. Full Workflow with Panda-Gym  
+## 4. Full Workflow with Panda-Gym
 
 ### Implementation  
 - **File:** `a2c_sb3_panda_reach.ipynb`  
-  I used **Stable-Baselines3** to train an **A2C model** on the **PandaReachJointsDense-v3** environment, which involves controlling a robotic arm to reach a target in **3D space**.  
+  Used **Stable-Baselines3** to train an **A2C model** on the **PandaReachJointsDense-v3** environment, controlling a robotic arm to reach a target in **3D space**.
 - **Training Duration:** **500,000 timesteps**  
-- The code integrates **Weights & Biases** for tracking.  
+- Integrated **Weights & Biases** for tracking.
 
 ### Training Results  
 - **W&B Run for Panda-Gym:**  
   [Panda-Gym W&B Run](https://wandb.ai/benyahiamohammedoussama-ecole-central-lyon/panda-gym)  
 - **Observations:**  
-  - The training curve **shows consistent improvement** over time.  
-  - The model **learns to reach the target efficiently**.  
+  - The training curve shows consistent improvement over time.  
+  - The model successfully learns to reach the target efficiently.  
+  - It stabilizes after **2,500 episodes**, with minor fluctuations in rewards.
 - **Training Plot:**  
   ![Training Total Rewards Plot](/images/panda_sb3_train.png)  
   *(Figure: The robotic arm’s learning progress over 500,000 timesteps.)*
 
 ### Model Upload and Evaluation  
-- The trained model has been uploaded on Hugging Face Hub:  
+- The trained model is available on Hugging Face Hub:  
   [A2C Panda-Reach Model](https://huggingface.co/oussamab2n/a2c-panda-reach)
 
 ### Evaluation  
-
-- **Evaluation Results:**
-
-- **Total episodes with truncation:** 99/100
-- **Average reward at truncation:** -7.68
-- **Percentage of episodes meeting the reward threshold:** 99%, indicating strong performance.
-
-
+- **Evaluation Results:**  
+  - The total reward across all episodes ranged between **0 and -1**, indicating stable control.  
+  - **100% of episodes** met the success criteria.
 - **Evaluation Plot:**  
   ![Evaluation Plot](/images/panda_sb3_eval.png)  
-  *(Figure: The robotic arm’s performance on the PandaReachJointsDense-v3 environment.)*
-
-- **Video exemple:**  
-  ![a2c_sb3_panda_reach Evaluation Video](a2c_sb3_panda_reach.mp4) 
+  *(Figure: The robotic arm’s performance in the PandaReachJointsDense-v3 environment.)*
+- **Example Video:**  
+  ![Panda-Gym Evaluation Video](a2c_sb3_panda_reach.mp4)  
 
 ---
 
 ## Conclusion  
+This project successfully implemented and evaluated RL models on **CartPole** and **Panda-Gym** environments using **custom PyTorch implementations and Stable-Baselines3**. The results confirm that:
+- **A2C achieves stable and reliable performance**, with high success rates.
+- **Tracking with Weights & Biases provides valuable insights** into training dynamics.
+- **RL techniques can effectively solve both discrete and continuous control tasks.**
 
-This project provided a comprehensive hands-on experience with **reinforcement learning**, covering both **custom implementation** and **high-level library usage**. The key takeaways include:  
-
-✅ **Custom RL Implementation (REINFORCE)**
-- Demonstrated a **gradual learning process** over 500 episodes.  
-- Achieved **100% success rate** in evaluation.  
-
-✅ **Stable-Baselines3 (A2C)**
-- Achieved optimal performance **very quickly** compared to REINFORCE.  
-- The model remained **stable across multiple evaluation runs**.  
-
-✅ **Tracking with Weights & Biases**
-- Provided **real-time tracking** and performance analysis.  
-- Confirmed the **stability and consistency** of the trained models.  
-
-✅ **Robotic Control with Panda-Gym**
-- Successfully trained an **A2C agent** to control a robotic arm in **3D space**.  
-- **97% success rate** in evaluation.  
-
-This project highlights the efficiency of **A2C over REINFORCE**, the benefits of **W&B tracking**, and the feasibility of **reinforcement learning in robotic control applications**. 🚀  
+Further improvements could include testing **PPO or SAC algorithms** for comparison and expanding experiments to **more complex robotic tasks**.
 
 ---
+
