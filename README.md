@@ -124,10 +124,15 @@ This repository contains my individual work for the **Hands-On Reinforcement Lea
 ---
 
 ## Conclusion  
-This project successfully implemented and evaluated RL models on **CartPole** and **Panda-Gym** environments using **custom PyTorch implementations and Stable-Baselines3**. The results confirm that:
-- **A2C achieves stable and reliable performance**, with high success rates.
-- **Tracking with Weights & Biases provides valuable insights** into training dynamics.
-- **RL techniques can effectively solve both discrete and continuous control tasks.**
+
+This project successfully applied reinforcement learning techniques to control both a **CartPole system** and a **Panda-Gym robotic arm** using **REINFORCE** and **A2C** algorithms. The experiments demonstrated that:  
+
+- **REINFORCE** efficiently learned an optimal policy for CartPole but required more episodes to stabilize.  
+- **A2C (Stable-Baselines3)** improved training stability and efficiency, reaching optimal performance faster.  
+- **Weights & Biases (W&B)** was valuable for tracking and analyzing training performance in real-time.  
+- The **Panda-Gym experiment** showed that A2C effectively trained the robotic arm to reach targets in 3D space.  
+
+These results confirm the effectiveness of policy-gradient-based RL methods for solving **control and robotics problems**, highlighting the advantages of **actor-critic approaches** in stabilizing learning. Future work could explore more **advanced RL algorithms** (e.g., PPO, SAC) and extend experiments to **more complex robotic tasks**.
 
 Further improvements could include testing **PPO or SAC algorithms** for comparison and expanding experiments to **more complex robotic tasks**.
 
