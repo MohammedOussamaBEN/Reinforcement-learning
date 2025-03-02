@@ -134,7 +134,5 @@ This project successfully applied reinforcement learning techniques to control b
 
 These results confirm the effectiveness of policy-gradient-based RL methods for solving **control and robotics problems**, highlighting the advantages of **actor-critic approaches** in stabilizing learning. Future work could explore more **advanced RL algorithms** (e.g., PPO, SAC) and extend experiments to **more complex robotic tasks**.
 
-Further improvements could include testing **PPO or SAC algorithms** for comparison and expanding experiments to **more complex robotic tasks**.
-
 ---
 
