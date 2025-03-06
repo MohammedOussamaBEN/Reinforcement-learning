@@ -13,8 +13,12 @@ This repository contains my individual work for the **Hands-On Reinforcement Lea
 ### Training Results  
 - The model was trained for **500 episodes**, showing a steady increase in total rewards. The goal (total reward = 500) was reached consistently after **400 episodes**, confirming successful learning.
 - **Training Plot:**  
-  <p align="center"> ![Training Plot](/images/train_rewards.png)  
-  *(Figure: Total rewards increase per episode, indicating successful learning.)* </p>
+  <p align="center">
+  ![Training Plot](/images/train_rewards.png)  
+</p>
+<p align="center">
+  *(Figure: Total rewards increase per episode, indicating successful learning.)*
+</p>
 
 ### Model Saving  
 - The trained model is saved as: `reinforce_cartpole.pth`.
