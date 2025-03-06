@@ -115,7 +115,7 @@ This repository contains my individual work for the **Hands-On Reinforcement Lea
 - **Evaluation Results:**  
   - The total reward across all episodes ranged between **0 and -1**, indicating stable control.  
   - **100% of episodes** met the success criteria.
-  ![Result](/images/panda_sb3_eval1.png){:width="50%"}
+  ![Result](/images/panda_sb3_eval1.png){:width="20%"}
   
 - **Evaluation Plot:**  
   ![Evaluation Plot](/images/panda_sb3_eval.png)  
