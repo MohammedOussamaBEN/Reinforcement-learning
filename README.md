@@ -17,7 +17,7 @@ This repository contains my individual work for the **Hands-On Reinforcement Lea
   ![Training Plot](/images/train_rewards.png)  
 </p>
 <p align="center">
-  *(Figure: Total rewards increase per episode, indicating successful learning.)*
+  <b>(Figure: Total rewards increase per episode, indicating successful learning.)</b>
 </p>
 
 ### Model Saving  
