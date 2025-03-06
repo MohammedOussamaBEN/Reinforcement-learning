@@ -28,8 +28,8 @@ This repository contains my individual work for the **Hands-On Reinforcement Lea
 - **Evaluation Results:**  
   - **100%** of the episodes reached a total reward of **500**, demonstrating the model’s reliability.
 - **Evaluation Plot:**  
-  <p align="center"> ![Evaluation Plot](/images/eval_rewards.png)  
-  *(Figure: The model consistently reaches a total reward of 500 over 100 evaluation episodes.)*</p>
+  <p align="center"> ![Evaluation Plot](/images/eval_rewards.png)<br>  
+  <b>(Figure: The model consistently reaches a total reward of 500 over 100 evaluation episodes.)</b> </p>
 
 - **Example Video:**  
   <p align="center"> ![REINFORCE CartPole Evaluation Video](reinforce_cartpole.mp4) </p> 
@@ -45,14 +45,14 @@ This repository contains my individual work for the **Hands-On Reinforcement Lea
 ### Training Results  
 - The model was trained for **500,000 timesteps**, reaching a total reward of **500** consistently after **400 episodes**. It continued training for **1,400 episodes**, confirming stable convergence similar to the REINFORCE approach.
 - **Training Plot:**  
-  <p align="center"> ![SB3 CartPole Training Plot](/images/sb3_train.png)  
-  *(Figure: A2C training performance over time.)* </p>
+  <p align="center"> ![SB3 CartPole Training Plot](/images/sb3_train.png)  <br>
+  <b>(Figure: A2C training performance over time.)</b> </p>
 
 ### Evaluation  
 - The trained model was evaluated, achieving **100% success**, with all episodes reaching a total reward of **500**.
 - **Evaluation Plot:**  
-  <p align="center"> ![SB3 CartPole Evaluation Plot](/images/sb3_eval.png)  
-  *(Figure: A2C model consistently achieves perfect performance over 100 episodes.)* </p>
+  <p align="center"> ![SB3 CartPole Evaluation Plot](/images/sb3_eval.png)  <br>
+  <b>(Figure: A2C model consistently achieves perfect performance over 100 episodes.)</b> </p>
 
 ### Model Upload  
 - The trained A2C model is available on Hugging Face Hub:  
@@ -83,12 +83,12 @@ This repository contains my individual work for the **Hands-On Reinforcement Lea
 - **Evaluation Results:**  
   - **100%** of episodes reached a total reward of **500**, confirming the model’s reliability.
 - **Evaluation Plot:**  
-  <p align="center">![W&B Evaluation Plot](/images/sb3_wb_eval.png)  
-  *(Figure: Evaluation results tracked using W&B.)* </p>
+  <p align="center">![W&B Evaluation Plot](/images/sb3_wb_eval.png)  <br>
+  <b>(Figure: Evaluation results tracked using W&B.)</b> </p>
 - **Example Video:**  
-  <p align="center">![W&B Evaluation Video](a2c_sb3_cartpole.mp4)  
+  <p align="center">![W&B Evaluation Video](a2c_sb3_cartpole.mp4)  </p>
   The A2C model stabilizes the balancing process more efficiently due to its superior performance compared to the REINFORCE approach.
-  </p>
+  
 ---
 
 ## 4. Full Workflow with Panda-Gym
@@ -107,8 +107,8 @@ This repository contains my individual work for the **Hands-On Reinforcement Lea
   - The model successfully learns to reach the target efficiently.  
   - It stabilizes after **2,500 episodes**, with minor fluctuations in rewards.
 - **Training Plot:**  
-  <p align="center"> ![Training Total Rewards Plot](/images/panda_sb3_train.png)  
-  *(Figure: The robotic arm’s learning progress over 500,000 timesteps.)*</p>
+  <p align="center"> ![Training Total Rewards Plot](/images/panda_sb3_train.png)  <br>
+  <b>(Figure: The robotic arm’s learning progress over 500,000 timesteps.)</b></p>
 
 ### Model Upload and Evaluation  
 - The trained model is available on Hugging Face Hub:  
@@ -123,8 +123,8 @@ This repository contains my individual work for the **Hands-On Reinforcement Lea
 
   
 - **Evaluation Plot:**  
-  <p align="center"> ![Evaluation Plot](/images/panda_sb3_eval.png)  
-  *(Figure: The robotic arm’s performance in the PandaReachJointsDense-v3 environment.)*</p>
+  <p align="center"> ![Evaluation Plot](/images/panda_sb3_eval.png)  <br>
+  <b>(Figure: The robotic arm’s performance in the PandaReachJointsDense-v3 environment.)</b></p>
 - **Example Video:**  
   <p align="center"> ![Panda-Gym Evaluation Video](a2c_sb3_panda_reach.mp4) </p> 
 
