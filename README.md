@@ -16,9 +16,10 @@ This repository contains my individual work for the **Hands-On Reinforcement Lea
   <p align="center">
   ![Training Plot](/images/train_rewards.png)  
 </p>
-<p align="center">
+<p style="text-align: center;">
   <b>(Figure: Total rewards increase per episode, indicating successful learning.)</b>
 </p>
+
 
 ### Model Saving  
 - The trained model is saved as: `reinforce_cartpole.pth`.
