@@ -28,7 +28,7 @@ This repository contains my individual work for the **Hands-On Reinforcement Lea
 - **Evaluation Results:**  
   - **100%** of the episodes reached a total reward of **500**, demonstrating the model’s reliability.
 - **Evaluation Plot:**  
-  <p align="center"> ![Evaluation Plot](/images/eval_rewards.png)<br>  
+  <p align="center"> ![Evaluation Plot](images/eval_rewards.png)<br>  
   <b>(Figure: The model consistently reaches a total reward of 500 over 100 evaluation episodes.)</b> </p>
 
 - **Example Video:**  
